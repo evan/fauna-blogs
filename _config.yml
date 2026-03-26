@@ -1,0 +1,22 @@
+title: Fauna Blog Archive
+description: Archive of blog posts and articles from Fauna
+baseurl: ""
+url: ""
+
+markdown: kramdown
+permalink: /:slug/
+
+# Build settings
+theme: minima
+
+# Show all posts (no pagination limit)
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
