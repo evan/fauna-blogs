@@ -4,7 +4,7 @@ title: "Evan Weaver: 'When we started at Twitter, databases were bad. When we le
 date: 2018-08-06
 description: "If there is one thing that is true of Twitter's growing pains, it is that it used to fail. A lot."
 original_url: "https://venturebeat.com/business/evan-weaver-when-we-started-at-twitter-databases-were-bad-when-we-left-they-were-still-bad/"
-author: "Stewart Rogers"
+author: "Stewart Rogers, VentureBeat"
 category: press
 ---
 

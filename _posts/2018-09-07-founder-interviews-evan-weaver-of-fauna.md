@@ -4,7 +4,7 @@ title: "Founder Interviews: Evan Weaver of Fauna"
 date: 2018-09-07
 description: "Previously at [Twitter](https://hackernoon.com/company/twitter) as employee #15, Evan Weaver has recently raised a $25M Series A to grow Fauna, a cloud-native database."
 original_url: "https://hackernoon.com/founder-interveiws-evan-weaver-of-fauna-73f9e220ea91"
-author: "Davis Baer"
+author: "Davis Baer, HackerNoon"
 category: press
 ---
 

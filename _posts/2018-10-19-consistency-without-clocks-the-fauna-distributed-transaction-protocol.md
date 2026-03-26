@@ -8,7 +8,7 @@ author: "Daniel Abadi, Matt Freels, Evan Weaver"
 category: blog
 ---
 
-> ***Transactions are hard. Distributed transactions are harder. Distributed transactions over the WAN are final boss hardness. - Andy Pavlo***
+> *Transactions are hard. Distributed transactions are harder. Distributed transactions over the WAN are final boss hardness. - Andy Pavlo*
 
 Fauna is a distributed database platform that supports strictly serializable, externally consistent transactions. Unlike [Google Spanner](https://research.google/pubs/pub39966/) or similar systems, Fauna does not rely on physical clock synchronization to maintain consistency. Also, unlike [Google Percolator](https://research.google/pubs/pub36726/), [FoundationDB](https://www.foundationdb.org/), or similar systems, Fauna places no constraints on replica distance and is practical to deploy at global internet latencies.
 

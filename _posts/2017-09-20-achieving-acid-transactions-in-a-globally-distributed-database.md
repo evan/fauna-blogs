@@ -4,7 +4,7 @@ title: "Achieving ACID Transactions in a Globally Distributed Database"
 date: 2017-09-20
 description: "One of the features of Fauna that has generated the most excitement is its strongly consistent distributed ACID transaction engine. In this post we’ll explain how Fauna’s [Calvin](http://cs.yale.edu/homes/thomson/publications/calvin-sigmod12.pdf)-inspired transaction e"
 original_url: "https://fauna.com/blog/acid-transactions-in-a-globally-distributed-database"
-author: "[Daniel Abadi](http://dbmsmusings.blogspot.co.il/2010/04/problems-with-cap-and-yahoos-little.html), Matt Freels"
+author: "Daniel Abadi, Matt Freels"
 category: blog
 ---
 

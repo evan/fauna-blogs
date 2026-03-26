@@ -22,7 +22,3 @@ With this change we are also committing to releasing an open source version of F
 
 We are profoundly grateful to our customers, partners, and investors who have been integral to the Fauna journey. We would not have accomplished what we did without your support. We understand that this is going to be a disruptive change to many and are fully committed to working with our existing customers to help them migrate off the service over the next several months. While this marks the end of the paid Fauna service the team looks forward to sharing the Fauna technology with the broader community.
 
-To read more about the migration support and timelines for existing customers please follow the link below.
-
-* FAQs for Fauna customers
-* Migration guide

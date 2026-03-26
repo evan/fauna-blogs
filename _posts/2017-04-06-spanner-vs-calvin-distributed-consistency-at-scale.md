@@ -8,10 +8,6 @@ author: "Daniel J. Abadi, Evan Weaver"
 category: blog
 ---
 
-![blog post image](/assets/images/spanner-vs-calvin-distributed-consistency-at-scale-1.png)
-
-*Daniel J. Abadi is an Associate Professor at Yale University. He does research primarily in database system architecture and implementation. He received a Ph.D. from MIT and a M.Phil from Cambridge.*
-
 ## Introduction
 
 In 2012, two research papers were published that described the design of geographically replicated, consistent, ACID compliant, transactional database systems. Both papers criticized the proliferation of NoSQL database systems that compromise replication consistency and transactional support, and argue that it is possible to build extremely scalable, geographically-replicated systems without giving up consistency and transactional support.

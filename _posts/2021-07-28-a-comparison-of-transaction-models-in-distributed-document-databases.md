@@ -16,7 +16,7 @@ In the distant past of the 2010’s, distributed document databases didn’t off
 
 Time has gone by and things are very different now. The benefits of transactionality are widely accepted outside of the context of SQL and [even databases in general](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/saga/saga), and key distributed systems problems have been solved. All modern distributed document databases now offer some form of transactionality, but their [implementation](https://static.googleusercontent.com/media/research.google.com/en//archive/spanner-osdi2012.pdf)s and characteristics vary widely.
 
-Read on to explore the differences between [Couchbase](https://www.couchbase.com/), MongoDB, Google Cloud [Firestore](https://firebase.google.com/products/firestore), and Fauna.
+Read on to explore the differences between Couchbase, MongoDB, Google Cloud Firestore, and Fauna.
 
 ### What is best in life and transactions?
 

@@ -8,12 +8,6 @@ author: "Daniel Abadi, Matt Freels"
 category: blog
 ---
 
-⚠️ Disclaimer ⚠️
-
-### This post refers to a previous version of FQL.
-
-This post refers to a previous version of FQL (v4). For the most current version of the language, visit our FQL documentation.
-
 Is a temporal database the same as a time-series database? This is a frequent point of confusion.
 
 ## What is a time series?
