@@ -2,7 +2,7 @@
 layout: post
 title: "Achieving ACID Transactions in a Globally Distributed Database"
 date: 2017-09-20
-description: "One of the features of Fauna that has generated the most excitement is its strongly consistent distributed ACID transaction engine. In this post we’ll explain how Fauna’s [Calvin](http://cs.yale.edu/homes/thomson/publications/calvin-sigmod12.pdf)-inspired transaction e"
+description: "One of the features of Fauna that has generated the most excitement is its strongly consistent distributed ACID transaction engine. In this post we’ll explain how Fauna’s [Calvin](/assets/pdfs/calvin-sigmod12.pdf)-inspired transaction e"
 original_url: "https://fauna.com/blog/acid-transactions-in-a-globally-distributed-database"
 author: "Daniel Abadi, Matt Freels"
 category: blog
@@ -133,7 +133,7 @@ The only other option would be to manually shard the application into multiple s
 
 The challenge of implementing ACID transactions in a distributed system comes down to consistently resolving transactions across data partitions in as efficient and scalable a manner as possible. Furthermore, with geographically distributed replicas, minimizing cross-region network communication is critical in order to maintain reasonable response latencies.
 
-Fauna’s distributed transaction engine is inspired by Calvin. Each database has a single partitioned [RAFT-replicated](https://raft.github.io/raft.pdf) log that is used to derive a total order of all transaction effects, and that handles all cross-region network communication.
+Fauna’s distributed transaction engine is inspired by Calvin. Each database has a single partitioned [RAFT-replicated](/assets/pdfs/raft.pdf) log that is used to derive a total order of all transaction effects, and that handles all cross-region network communication.
 
 Transactions are processed in two phases: an *execute phase* and a *commit phase*.
 

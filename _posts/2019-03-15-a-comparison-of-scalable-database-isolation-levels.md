@@ -67,12 +67,12 @@ A good way to think about isolation is in terms of the breadth of potential anom
 
 ## References
 
-1. [Calvin: Fast Distributed Transactionsfor Partitioned Database Systems](http://cs.yale.edu/homes/thomson/publications/calvin-sigmod12.pdf)
-2. [Spanner: Google's Globally-Distributed Database](https://static.googleusercontent.com/media/research.google.com/en//archive/spanner-osdi2012.pdf)
-3. [Large-scale Incremental Processing Using Distributed Transactions and Notifications](https://research.google/pubs/pub36726/)
+1. [Calvin: Fast Distributed Transactionsfor Partitioned Database Systems](/assets/pdfs/calvin-sigmod12.pdf)
+2. [Spanner: Google's Globally-Distributed Database](/assets/pdfs/spanner-osdi2012.pdf)
+3. [Large-scale Incremental Processing Using Distributed Transactions and Notifications](/assets/pdfs/Peng.pdf)
 4. [Cloud Spanner: TrueTime and external consistency](https://cloud.google.com/spanner/docs/true-time-external-consistency)
 5. [FoundationDB Consistency](https://apple.github.io/foundationdb/consistency.html)
-6. [FoundationDB Record Layer:A Multi-Tenant Structured Datastore](https://arxiv.org/pdf/1901.04452.pdf)
+6. [FoundationDB Record Layer:A Multi-Tenant Structured Datastore](/assets/pdfs/foundationdb-record-layer.pdf)
 7. [CockroachDB's Consistency Model](https://www.cockroachlabs.com/blog/consistency-model/)
 8. [Jepsen CockroachDB beta-20160829](https://jepsen.io/analyses/cockroachdb-beta-20160829)
 9. [YugaByte Isolation Levels](https://docs.yugabyte.com/latest/architecture/transactions/isolation-levels/)

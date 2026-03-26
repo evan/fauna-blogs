@@ -10,7 +10,7 @@ category: blog
 
 > *Transactions are hard. Distributed transactions are harder. Distributed transactions over the WAN are final boss hardness. - Andy Pavlo*
 
-Fauna is a distributed database platform that supports strictly serializable, externally consistent transactions. Unlike [Google Spanner](https://research.google/pubs/pub39966/) or similar systems, Fauna does not rely on physical clock synchronization to maintain consistency. Also, unlike [Google Percolator](https://research.google/pubs/pub36726/), [FoundationDB](https://www.foundationdb.org/), or similar systems, Fauna places no constraints on replica distance and is practical to deploy at global internet latencies.
+Fauna is a distributed database platform that supports strictly serializable, externally consistent transactions. Unlike [Google Spanner](https://research.google/pubs/pub39966/) or similar systems, Fauna does not rely on physical clock synchronization to maintain consistency. Also, unlike [Google Percolator](/assets/pdfs/Peng.pdf), [FoundationDB](https://www.foundationdb.org/), or similar systems, Fauna places no constraints on replica distance and is practical to deploy at global internet latencies.
 
 This post describes how read-write and read only transactions are implemented in Fauna. We will start with some background and then explain how the core protocol maintains consistency across geographic distances. We then discuss the performance implications of Fauna’s architecture.
 
@@ -31,7 +31,7 @@ Serializable isolation means that the system can process many transactions in pa
 
 ### Pre-Processing in Fauna
 
-Fauna’s protocol, which was inspired by [Calvin](http://cs.yale.edu/homes/thomson/publications/calvin-sigmod12.pdf), decides on this serial order prior to performing any writes to the database. For each batch of parallel read-write transactions, they are inserted into a distributed, write-ahead transaction log and the Fauna execution engine ensures that the final result of processing this batch of transactions is equivalent to as if they were processed one-by-one in the order they appeared in this pre-generated log.
+Fauna’s protocol, which was inspired by [Calvin](/assets/pdfs/calvin-sigmod12.pdf), decides on this serial order prior to performing any writes to the database. For each batch of parallel read-write transactions, they are inserted into a distributed, write-ahead transaction log and the Fauna execution engine ensures that the final result of processing this batch of transactions is equivalent to as if they were processed one-by-one in the order they appeared in this pre-generated log.
 
 ![blog post image](/assets/images/consistency-without-clocks-the-fauna-distributed-transaction-protocol-1.jpeg)
 

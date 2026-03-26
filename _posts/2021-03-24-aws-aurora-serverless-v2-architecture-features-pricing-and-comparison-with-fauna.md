@@ -156,7 +156,7 @@ In Fauna, after executing the query, if the query contains writes, it must be su
 
 ### Log layer
 
-Fauna has one component that Aurora does not have: the transaction log. This service, inspired by the [Calvin paper](http://cs.yale.edu/homes/thomson/publications/calvin-sigmod12.pdf), guarantees strict serializability for read-write transactions. It also serves as a logical clock for all transactions, eliminating the need to rely on atomic clock synchronization. Because of the transaction log, Fauna can offer read-only serializability without cross-datacenter coordination.
+Fauna has one component that Aurora does not have: the transaction log. This service, inspired by the [Calvin paper](/assets/pdfs/calvin-sigmod12.pdf), guarantees strict serializability for read-write transactions. It also serves as a logical clock for all transactions, eliminating the need to rely on atomic clock synchronization. Because of the transaction log, Fauna can offer read-only serializability without cross-datacenter coordination.
 
 Also because of the log, Fauna has no concept of a primary region. Fauna’s replication works semi-synchronously, replicating read-write transactions in the log before any data in the replicas is actually modified. This lets Fauna commit transactions with only a single global round-trip of latency.
 
@@ -272,7 +272,7 @@ Presumably AWS will reduce the minimum running cost over time, but they cannot e
 
 ### Compute capacity
 
-Now we need to figure out how much work one time period can do. AWS has published some [benchmarks](https://severalnines.com/database-blog/benchmarking-managed-postgresql-cloud-solutions-part-one-amazon-aurora) for Aurora in provisioned mode, but some of them trend towards [benchmarketing](https://d1.awsstatic.com/product-marketing/Aurora/RDS_Aurora_Performance_Assessment_Benchmarking_v1-2.pdf): for example, reading a single column, from a single row, from a dataset that fits entirely in a small amount of RAM on a monster 64-core MySQL node.
+Now we need to figure out how much work one time period can do. AWS has published some [benchmarks](https://severalnines.com/database-blog/benchmarking-managed-postgresql-cloud-solutions-part-one-amazon-aurora) for Aurora in provisioned mode, but some of them trend towards [benchmarketing](/assets/pdfs/aurora-benchmarking.pdf): for example, reading a single column, from a single row, from a dataset that fits entirely in a small amount of RAM on a monster 64-core MySQL node.
 
 Instead, we can turn to *pgbench*, the built-in PostgreSQL benchmarking tool. By default, it runs a simple, yet realistic write-biased transaction based on TPC-B. It also includes transactional dependencies that require concurrency control. Notably, it does not include indexes, but relies exclusively on primary key lookups. Here is the actual transaction:
 

@@ -301,21 +301,21 @@ You can find out more about Fauna and FQL here.
 
 ## References
 
-1. [Stonebraker 2005 - What Goes Around Comes Around](https://people.cs.umass.edu/~yanlei/courses/CS691LL-f06/papers/SH05.pdf)
+1. [Stonebraker 2005 - What Goes Around Comes Around](/assets/pdfs/stonebraker-goes-around.pdf)
 2. [Relational AI's Rel language](https://docs.relational.ai/rel)
 3. Connection pooling itself comes with the risk of crossed wires and mixing up statements from unrelated transactions. Developers can misuse clients, or process-based connection poolers (such as pgbouncer for Postgres) can misinterpret SQL statements.
 4. A memorable production incident was when a service's production PostgreSQL database started experiencing connection starvation due to periodic storms of transactions consisting only of a BEGIN followed by a COMMIT statement. These storms were highly correlated with intermittent increased latency enqueuing to RabbitMQ as part of the application code. How, you may ask, could these possibly be related? It turned out that the application framework was wrapping every request in BEGIN and COMMIT in order to make every request atomic by default, leading to RabbitMQ becoming part of the database transaction lifecycle!
 5. [Expressive power](https://en.wikipedia.org/wiki/Expressive_power_(computer_science))
 6. While it is true that the vast majority of SQL databases support procedural logic, it is limited to stored procedures and UDFs which must be defined ahead of time and bypass SQL's inherent limitations on response shape, which we will discuss below.
 7. [N+1 problem](https://stackoverflow.com/questions/97197/what-is-the-n1-selects-problem-in-orm-object-relational-mapping)
-8. [Feral concurrency](http://www.bailis.org/papers/feral-sigmod2015.pdf)
+8. [Feral concurrency](/assets/pdfs/feral-sigmod2015.pdf)
 9. [Against SQL](https://www.scattered-thoughts.net/writing/against-sql/#complexity-drag)
 10. [Why SQL syntax sucks, and why it matters](https://carlineng.com/?postid=sql-bad-syntax#blog)
-11. [A Critique of the SQL Database Language](https://courses.cs.duke.edu/compsci516/cps216/spring03/papers/date-1983.pdf) also see [this great interview with Chris Date from 2014](https://www.red-gate.com/simple-talk/opinion/opinion-pieces/chris-date-and-the-relational-model/)
+11. [A Critique of the SQL Database Language](/assets/pdfs/date-critique-sql-1983.pdf) also see [this great interview with Chris Date from 2014](https://www.red-gate.com/simple-talk/opinion/opinion-pieces/chris-date-and-the-relational-model/)
 12. In comparison, the [ECMAScript 2021 spec](https://www.ecma-international.org/wp-content/uploads/ECMA-262_12th_edition_june_2021.pdf) is 879 pages and the [C++ 2020 spec](https://www.iso.org/standard/79358.html) is 1853 pages.
 13. [PostgreSQL SELECT documentation](https://www.postgresql.org/docs/current/sql-select.html)
 14. As of writing, Fauna's entire FQL/FSL parser module is around 2000 lines of code, compared to PostgreSQL's Bison grammar, which is almost 19000 lines long.
-15. “The most effective debugging tool is still careful thought, coupled with judiciously placed print statements.” — [Brian Kernighan, “Unix for Beginners” (1979)](https://people.computing.clemson.edu/~dhouse/courses/404/docs/unix4beg.pdf)
+15. “The most effective debugging tool is still careful thought, coupled with judiciously placed print statements.” — [Brian Kernighan, “Unix for Beginners” (1979)](/assets/pdfs/kernighan-unix-beginners.pdf)
 16. The situations which lead to this sort of heuristics failure tend to be ones where the cost model the optimizer uses cannot adequately capture the application domain, leading it to make the wrong choice. A good example might be a JOIN in a multitenant app predicated on a tenant key. The developer knows the importance of tenants, so starting with an index partitioned by tenant key is always the right choice. However the database itself cannot know that for a fact and can wind up choosing the wrong index or table to start the JOIN off with.
 17. Ironically, where SQL queries are declarative, SQL's data definition language is fundamentally imperative.
 18. These systems are detailed in Fauna's architectural whitepaper

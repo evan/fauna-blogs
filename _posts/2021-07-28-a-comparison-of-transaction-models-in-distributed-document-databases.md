@@ -14,7 +14,7 @@ A distributed document database is a NoSQL database that stores semi-structured 
 
 In the distant past of the 2010’s, distributed document databases didn’t offer [transaction support](https://blog.couchbase.com/couchbase-transactions-with-n1ql/), instead implementing various forms of eventual consistency. Vendors and open-source maintainers promoted the idea that transactionality was an unnecessary, complexifying feature that damaged scalability and availability—and many claimed that adding it to their systems was [impossible](https://stackoverflow.com/questions/16779348/does-the-cap-theorem-imply-that-acid-is-not-possible-for-distributed-databases).
 
-Time has gone by and things are very different now. The benefits of transactionality are widely accepted outside of the context of SQL and [even databases in general](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/saga/saga), and key distributed systems problems have been solved. All modern distributed document databases now offer some form of transactionality, but their [implementation](https://static.googleusercontent.com/media/research.google.com/en//archive/spanner-osdi2012.pdf)s and characteristics vary widely.
+Time has gone by and things are very different now. The benefits of transactionality are widely accepted outside of the context of SQL and [even databases in general](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/saga/saga), and key distributed systems problems have been solved. All modern distributed document databases now offer some form of transactionality, but their [implementation](/assets/pdfs/spanner-osdi2012.pdf)s and characteristics vary widely.
 
 Read on to explore the differences between Couchbase, MongoDB, Google Cloud Firestore, and Fauna.
 
@@ -87,7 +87,7 @@ Unfortunately, the default consistency levels allow reads of committed data to h
 
 Unique constraints are supported, but apparently via a different mechanism than transactions as they predate them. It is unclear to me how indexes with unique constraints interact with snapshot isolation within transactions.
 
-MongoDB has been independently tested with Jepsen, but there is [extensive disagreement](https://jepsen.io/analyses/mongodb-4.2.6) between the company and the Jepsen team about the correct interpretation of the results. There are [many combinations](https://docs.mongodb.com/manual/core/transactions/%23transactions-and-write-concern) of read and write consistency levels that will violate even the most basic transactional properties.
+MongoDB has been independently tested with Jepsen, but there is [extensive disagreement](/assets/pdfs/MongoDB_4.2.6_Jepsen.pdf) between the company and the Jepsen team about the correct interpretation of the results. There are [many combinations](https://docs.mongodb.com/manual/core/transactions/%23transactions-and-write-concern) of read and write consistency levels that will violate even the most basic transactional properties.
 
 ### Interface
 

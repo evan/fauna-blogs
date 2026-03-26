@@ -2,7 +2,7 @@
 layout: post
 title: "Serializability vs “Strict” Serializability: The Dirty Secret of Database Isolation Levels"
 date: 2019-02-21
-description: "For many years “serializability” was referred to as the “[gold standard](https://amplab.cs.berkeley.edu/wp-content/uploads/2013/10/hat-vldb2014.pdf)” of database isolation levels. It was the highest isolation level offered in the vast majority of commercial database systems (so"
+description: "For many years “serializability” was referred to as the “[gold standard](/assets/pdfs/hat-vldb2014.pdf)” of database isolation levels. It was the highest isolation level offered in the vast majority of commercial database systems (so"
 original_url: "https://fauna.com/blog/serializability-vs-strict-serializability-the-dirty-secret-of-database-isolation-levels"
 author: "Daniel Abadi, Matt Freels"
 category: blog
@@ -49,13 +49,13 @@ The second (but related) limitation of serializability is that the serial order 
 
 It is unlikely any user would use a database that always returned the empty-set for every read-only query. So how did serializability become the “gold standard”?
 
-In the old days, databases would only run on a single machine. It was therefore trivial for database systems to make stronger correctness guarantees than serializability. In fact, it was so trivial that vendors never bothered advertising this stronger guarantee. Nonetheless, this stronger guarantee has a name: [Strict Serializability](http://cs.brown.edu/~mph/HerlihyW90/p463-herlihy.pdf).
+In the old days, databases would only run on a single machine. It was therefore trivial for database systems to make stronger correctness guarantees than serializability. In fact, it was so trivial that vendors never bothered advertising this stronger guarantee. Nonetheless, this stronger guarantee has a name: [Strict Serializability](/assets/pdfs/herlihy-linearizability.pdf).
 
 # Strict Serializability is Much Safer
 
 Strict serializability adds a simple extra constraint on top of serializability. If transaction Y starts after transaction X completes (note that this means that X and Y are, by definition, not concurrent), then a system that guarantees strict serializability guarantees both (1) final state is equivalent to processing transactions in a serial order and (2) X must be before Y in that serial order. Therefore, if I were to submit a transaction to a system that guarantees strict serializability, I know that any reads of that transaction will reflect the state of the database resulting from committed transactions (at least) up to the point in time when my transaction was submitted. The transaction may not see writes from concurrently submitted transactions, but at least it will see all the writes that completed before it began.
 
-When the database sits on a single machine, guaranteeing strict serializability usually involves no increased effort relative to guaranteeing serializability. Before committing a transaction, every existing system (the one exception being Dr. Daniel Abadi’s [“lazy transactions” paper](http://www.cs.umd.edu/~abadi/papers/lazy-xacts.pdf) from 2014) must perform the writes involved in that transaction. For a transaction that comes along later, it is usually more work to ignore these writes (and not see them) than it is to see them. Therefore, just about every serializable system running on a single machine also guaranteed strict serializability. This resulted in the state of the industry where documentation of database systems would indicate that they guarantee “serializability” but in reality, they were guaranteeing “strict serializability”.
+When the database sits on a single machine, guaranteeing strict serializability usually involves no increased effort relative to guaranteeing serializability. Before committing a transaction, every existing system (the one exception being Dr. Daniel Abadi’s [“lazy transactions” paper](/assets/pdfs/lazy-xacts.pdf) from 2014) must perform the writes involved in that transaction. For a transaction that comes along later, it is usually more work to ignore these writes (and not see them) than it is to see them. Therefore, just about every serializable system running on a single machine also guaranteed strict serializability. This resulted in the state of the industry where documentation of database systems would indicate that they guarantee “serializability” but in reality, they were guaranteeing “strict serializability”.
 
 The “strict serializability” guarantee eliminates the possibility of the system returning stale/empty data that we discussed in the previous section. [It does not, however, eliminate the problem of replica divergence that we discussed in that section. We will come back to that issue in a future post.]
 

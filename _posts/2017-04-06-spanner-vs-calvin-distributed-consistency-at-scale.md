@@ -14,7 +14,7 @@ In 2012, two research papers were published that described the design of geograp
 
 > It is possible to build extremely scalable, geographically-replicated systems without giving up consistency and transactional support.
 
-The first of these papers was the [Calvin paper](http://cs-www.cs.yale.edu/homes/dna/papers/calvin-sigmod12.pdf), published in SIGMOD 2012. A few months later, Google published their [Spanner paper](https://static.googleusercontent.com/media/research.google.com/en//archive/spanner-osdi2012.pdf) in OSDI 2012. Both of these papers have been cited many hundreds of times and have influenced the design of several modern “NewSQL” systems, including Fauna.
+The first of these papers was the [Calvin paper](/assets/pdfs/calvin-sigmod12.pdf), published in SIGMOD 2012. A few months later, Google published their [Spanner paper](/assets/pdfs/spanner-osdi2012.pdf) in OSDI 2012. Both of these papers have been cited many hundreds of times and have influenced the design of several modern “NewSQL” systems, including Fauna.
 
 Recently, Google released a beta version of their Spanner implementation, available to customers who use Google Cloud Platform. This development has excited many users seeking to build on Google’s cloud, since they now have a reliably scalable and consistent transactional database system to use as a foundation.
 

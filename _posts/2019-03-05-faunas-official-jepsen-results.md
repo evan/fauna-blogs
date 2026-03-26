@@ -30,7 +30,7 @@ It is self-operating:
 
 And its architecture is sound:
 
-> Fauna is based on peer-reviewed research into transactional systems, combining [Calvin](http://cs-www.cs.yale.edu/homes/dna/papers/calvin-sigmod12.pdf)’s cross-shard transactional protocol with Raft’s consensus system for individual shards. We believe Fauna’s approach is fundamentally sound...Calvin-based systems like Fauna could play an important future role in the distributed database landscape.
+> Fauna is based on peer-reviewed research into transactional systems, combining [Calvin](/assets/pdfs/calvin-sigmod12.pdf)’s cross-shard transactional protocol with Raft’s consensus system for individual shards. We believe Fauna’s approach is fundamentally sound...Calvin-based systems like Fauna could play an important future role in the distributed database landscape.
 
 In consultation with Kyle, we’ve fixed many known issues and newly discovered bugs, made API improvements, and expanded our documentation. Kyle has extended the Jepsen suite itself with new tests specifically inspired by Fauna. We have also incorporated the extended Jepsen test suite into our internal QA, to help ensure that we never backtrack on the level of reliability we intend to provide.
 
@@ -46,7 +46,7 @@ Those familiar with Jepsen reports will note that no other database tested has m
 
 When we started building Fauna, our objective was to deliver a cloud-native database that offered both transactional consistency and global scalability. For that reason, we chose Calvin as the basis for underlying transaction protocol.
 
-Other distributed, transactional databases use the first-generation [Google Percolator model](https://blog.octo.com/en/my-reading-of-percolator-architecture-a-google-search-engine-component/), which cannot scale transactions across datacenters, or the second-generation [Google Spanner model](https://static.googleusercontent.com/media/research.google.com/en//archive/spanner-osdi2012.pdf), which [requires atomic hardware clocks](http://dbmsmusings.blogspot.com/2018/09/newsql-database-systems-are-failing-to.html) and a specialized operational environment. Fauna is the only production database to use the third-generation Calvin protocol.
+Other distributed, transactional databases use the first-generation [Google Percolator model](https://blog.octo.com/en/my-reading-of-percolator-architecture-a-google-search-engine-component/), which cannot scale transactions across datacenters, or the second-generation [Google Spanner model](/assets/pdfs/spanner-osdi2012.pdf), which [requires atomic hardware clocks](http://dbmsmusings.blogspot.com/2018/09/newsql-database-systems-are-failing-to.html) and a specialized operational environment. Fauna is the only production database to use the third-generation Calvin protocol.
 
 By designing for global correctness up front, Fauna offers mainframe-like capabilities even in the chaos of a multi-cloud deployment. Externally consistent, multi-partition distributed transactions were widely believed to be impossible in a software-only solution until Fauna showed the way. We are proud to see our architecture validated in Kyle’s analysis.
 
