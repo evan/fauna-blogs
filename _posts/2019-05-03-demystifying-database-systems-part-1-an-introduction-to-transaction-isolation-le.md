@@ -4,7 +4,7 @@ title: "Demystifying Database Systems, Part 1: An Introduction to Transaction Is
 date: 2019-05-03
 description: "For decades, database systems have given their users multiple isolation levels to choose from, ranging from some flavor of “serializability” at the high end down to “read committed” or “read uncommitt"
 original_url: "https://fauna.com/blog/introduction-to-transaction-isolation-levels"
-author: "Daniel J. Abadi, Evan Weaver"
+author: "Daniel Abadi, Evan Weaver"
 category: blog
 ---
 

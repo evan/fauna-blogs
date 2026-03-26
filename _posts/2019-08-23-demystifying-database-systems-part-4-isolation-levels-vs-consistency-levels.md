@@ -4,7 +4,7 @@ title: "Demystifying Database Systems, Part 4: Isolation levels vs. Consistency 
 date: 2019-08-23
 description: "In several recent posts, we discussed two ways to trade off correctness for performance in database systems."
 original_url: "https://fauna.com/blog/demystifying-database-systems-part-4-isolation-levels-vs-consistency-levels"
-author: "Daniel J. Abadi, Evan Weaver"
+author: "Daniel Abadi, Evan Weaver"
 category: blog
 ---
 

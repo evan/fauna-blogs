@@ -4,7 +4,7 @@ title: "Demystifying Database Systems, Part 3: Introduction to Consistency Level
 date: 2019-07-25
 description: "Database systems typically give users the ability to trade off correctness for performance. We have spent the previous two posts in this series discussing one particular way to trade off correctness f"
 original_url: "https://fauna.com/blog/demystifying-database-systems-introduction-to-consistency-levels"
-author: "Daniel J. Abadi, Evan Weaver"
+author: "Daniel Abadi, Evan Weaver"
 category: blog
 ---
 

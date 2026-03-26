@@ -2,9 +2,9 @@
 layout: post
 title: "Spanner vs. Calvin: Distributed Consistency at Scale"
 date: 2017-04-06
-description: "[Daniel J. Abadi](http://cs-www.cs.yale.edu/homes/dna/) is an Associate Professor at Yale University. He does research primarily in database system architecture and implementation. He received a Ph.D. from MIT and a M.Phil from Cambridge. I"
+description: "[Daniel Abadi](http://cs-www.cs.yale.edu/homes/dna/) is an Associate Professor at Yale University. He does research primarily in database system architecture and implementation. He received a Ph.D. from MIT and a M.Phil from Cambridge. I"
 original_url: "https://fauna.com/blog/distributed-consistency-at-scale-spanner-vs-calvin"
-author: "Daniel J. Abadi, Evan Weaver"
+author: "Daniel Abadi, Evan Weaver"
 category: blog
 ---
 

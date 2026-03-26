@@ -2,13 +2,13 @@
 layout: post
 title: "Partitioned Consensus and Its Impact on Spanner’s Latency"
 date: 2018-12-14
-description: "[Daniel J. Abadi](http://cs-www.cs.yale.edu/homes/dna/) is the Darnell-Kanal Professor of Computer Science University of Maryland, College Park, was previously a professor at Yale University. His research focuses on database management syst"
+description: "[Daniel Abadi](http://cs-www.cs.yale.edu/homes/dna/) is the Darnell-Kanal Professor of Computer Science University of Maryland, College Park, was previously a professor at Yale University. His research focuses on database management syst"
 original_url: "https://fauna.com/blog/partitioned-consensus-and-its-impact-on-spanners-latency"
-author: "Daniel J. Abadi, Evan Weaver"
+author: "Daniel Abadi, Evan Weaver"
 category: blog
 ---
 
-*Daniel J. Abadi is the Darnell-Kanal Professor of Computer Science University of Maryland, College Park, was previously a professor at Yale University. His research focuses on database management systems architecture. He received a Ph.D. from MIT and a M.Phil from Cambridge. This post is cross-posted on his blog.*
+*Daniel Abadi is the Darnell-Kanal Professor of Computer Science University of Maryland, College Park, was previously a professor at Yale University. His research focuses on database management systems architecture. He received a Ph.D. from MIT and a M.Phil from Cambridge. This post is cross-posted on his blog.*
 
 In a [post that I published in September](http://dbmsmusings.blogspot.com/2018/09/newsql-database-systems-are-failing-to.html), I described two primary approaches for performing consensus in distributed systems, and how the choice of approach affects the consistency guarantees of the system. In particular, consensus can either be **unified**, such that all writes in the system participate in the same distributed consensus protocol, or it can be **partitioned**, such that different subsets of the data participate in distinct consensus protocols.
 

@@ -4,7 +4,7 @@ title: "Demystifying Database Systems, Part 2:  Correctness Anomalies Under Seri
 date: 2019-06-28
 description: "Most database systems support multiple isolation levels that enable their users to trade off exposure to various types of application anomalies and bugs for ([potentially small](/assets/pdfs/faleiro-vldb2017.pdf)) increases in potential "
 original_url: "https://fauna.com/blog/demystifying-database-systems-correctness-anomalies-under-serializable-isolation"
-author: "Daniel J. Abadi, Evan Weaver"
+author: "Daniel Abadi, Evan Weaver"
 category: blog
 ---
 
